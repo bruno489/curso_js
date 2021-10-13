@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			var dt=new Date();
+			
+			var ndt=new Date();
+			
+			ndt.setDate(dt.getDate()+20);
+			//maneira correta de acrescentar dias setDate acrescenta dias
+			
+			var dia=ndt.getDate();
+			var mes=ndt.getMonth();
+			var ano=ndt.getFullYear();
+			var meses=["Janeiro","Fevereiro","Março","Abril","Maio","junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+	
+			var horas=ndt.getHours();
+			var minutos=ndt.getMinutes();
+			var segundos=ndt.getSeconds();
+			
+			document.write(dia + " de "+ meses[mes] +" de "+ ano + "<br>");
+			document.write(horas + ":" + minutos + ":" + segundos);
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+	
+		
+		<script>
+		
+		
+		
+		
+		</script>
+		
+		<!-- getDay()=dia da semana, segunda, domingo...
+			getDate() dia do mes
+			getMonth() retorna o mes, janeiro, fevereiro...
+			getFullYear() retorna o ano
+			getDateString() retorna a data no padão 30/01/2020
+				-->
+		
+	</body>
+
+</html>

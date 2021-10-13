@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			var painel;
+			
+			function localizar(pos){
+				var c=pos.coords; //obtenho as coordenadas
+				painel.innerHTML+="Loc: Lat: " + c.latitude + " - Long: " + c.longitude +"<hr>";
+			}
+			
+			function verifica(){
+				painel=document.getElementById("painel");
+				painel.innerHTML+="Nome do Browser: " + navigator.appName + "<hr>";
+				painel.innerHTML+="Versão do Browser: " + navigator.appVersion + "<hr>";
+				painel.innerHTML+="Cookies: " + navigator.cookieEnabled + "<hr>";
+				navigator.geolocation.getCurrentPosition(localizar);
+				painel.innerHTML+="Idioma: " + navigator.language + "<hr>";
+				painel.innerHTML+="Online: " + navigator.onLine + "<hr>";
+				painel.innerHTML+="S.O.: " + navigator.platform + "<hr>";
+				painel.innerHTML+="Engine: " + navigator.product + "<hr>";
+				painel.innerHTML+="Agent: " + navigator.userAgent + "<hr>";
+			}
+			
+			window.addEventListener("load",verifica);
+			
+		</script>
+		
+		<style>
+			
+			#painel{
+			width:400px;
+			height:500px;
+			border:1px solid #000;
+			border-radius:10px;
+			padding:10px;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<div id="painel"></div>
+		
+		<!--
+			navigator.appName retorna o nome do browser
+			appVersion retorna a versão do browser
+			navigator.cookieEnabled se os cookies estão habilitados
+			navigator.geolocation obtem a localização
+			navigator.geolocation.getCurrentPosition(localizar) capitura latitude e longitude;
+			navigator.language diz a linguagem do browser
+			navigator.online se o bowser esta online ou não
+			navigator.platform qual é o sistema operacional
+		-->
+		
+	</body>
+
+</html>

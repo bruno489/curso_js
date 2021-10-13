@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	
+	<script>
+		
+		class Carro{
+			constructor(tpComb){
+				this.qtdeComb=100;
+				this.partida=false;
+				this.tipoComb=tpComb;
+			}
+			
+			info(){
+			document.write("Qtde combustibel: "+this.qtdeComb + "<br>");
+				document.write("Partida: "+this.partida + "<br>");
+				document.write("Tipo Combs: "+this.tipoComb + "<hr>");
+			}
+			
+			set ligado(v){
+				this.partida=v;
+			}
+			
+			set setComb(v){
+				if(v<0 || v<100){
+				   Alert("Valor inválido");
+				   }else{
+					   this.qtdeComb=v;
+				   }
+			}
+		}
+		
+		class carroCombate extends Carro{
+			constructor(porTiro){
+				super("Diesel");
+				//Super serve para acessar um elemento da classe pai, no caso, Carro e no caso dessa função construtora, o construtor do pai
+				this.tiros=1000;
+				this.potTiro=porTiro;
+				this.blindagem=100;
+			}
+			
+			info(){
+				//Já aqui eu estou chamando o info do pai
+				
+				document.write("Tiros: "+this.tiros + "<br>");
+				
+				document.write("Potencia do tiro: "+this.potTiro + "<br>");
+				
+				document.write("Blindagem: "+this.blindagem + "<br>");
+				super.info();
+				//escreve o que estava na classe pai
+			}
+		}
+		
+		let ford=new Carro(1);
+		let Tanque=new carroCombate("Calibre 50");
+		
+		
+		ford.ligado="Ligado";
+		
+		ford.info();
+		Tanque.info();
+		//aqui eu to chamando o info do filho
+		
+	</script>
+</head>
+
+<body>
+	
+	<!--
+	set ligado(v){
+				this.partida=v;
+			}
+	//Serve para acrescentar um valor diferente do original
+
+	bmw.ligado="Ligado";
+	forma de acrescentar
+-->
+	
+</body>
+</html>

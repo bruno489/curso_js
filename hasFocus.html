@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			setInterval(foco,0);
+			
+			function foco(){
+				var res=document.getElementById("simnao");
+				
+				if(document.hasFocus()){
+					res.innerHTML="";
+				}else{ res.innerHTML=">>NÃO<<"}
+			}
+			
+			function inicia(){
+				
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<div id="dvmsg">pagina <span id="simnao"></span> está em foco</div>
+		
+		<!--
+			retorna true se a pagina estiver em foco e false se não
+		-->
+		
+	</body>
+
+</html>

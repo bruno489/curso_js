@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+						
+			function definePainel(){
+				var obj=event.target.dataset;
+				document.getElementById("painel").innerHTML="Velocidade: "+ obj.vel + " Km/h <br>";
+				document.getElementById("painel").innerHTML+="Potencia: "+ obj.potencia + " F.Torque <br>";
+				document.getElementById("painel").innerHTML+="Cor: "+ obj.cor;
+				
+			}
+			
+			function inicia(){
+				document.getElementById("c1").addEventListener("click",definePainel);
+				document.getElementById("c2").addEventListener("click",definePainel);
+				document.getElementById("c3").addEventListener("click",definePainel);
+				document.getElementById("c4").addEventListener("click",definePainel);
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			.carro{
+				width:371px;
+				height:750px;
+				display:inline;
+				cursor:pointer;
+			}
+			
+			#painel{
+				border:solid 3px #000;
+				border-radius:10px;
+				padding:10px;
+				width:500px;
+				height:100px;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<div id="painel"></div>
+		<div id="c1" class="carro" ><img src="#" data-cor="Branco" data-potencia="80" data-vel="120"></div>
+		<div id="c2" class="carro" ><img src="#" data-cor="Vermelho" data-potencia="350" data-vel="320"></div>
+		<div id="c3" class="carro" ><img src="#" data-cor="Amarelo" data-potencia="110" data-vel="180"></div>
+		<div id="c4" class="carro" ><img src="#" data-cor="Preto" data-potencia="220" data-vel="260"></div>
+		
+		<!--
+			dataset atribui valores e configurações aos elementos
+			data-nome do atributo="valor"
+			event.target.dataset.cor=""; atribui um valor
+			
+			as imagens eram carros
+		-->
+		
+	</body>
+
+</html>

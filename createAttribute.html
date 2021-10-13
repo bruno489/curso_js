@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+		
+			function mudaCor(){
+				var num=document.getElementById("fnum").value;				
+				var p=document.getElementsByTagName("p");
+				var at=document.createAttribute("style");
+				
+				for(i=0;i<p.length;i++){
+					p[i].removeAttribute("style");
+				}
+				
+				at.value="color:#f00; font-size:30px;";
+				p[num].setAttributeNode(at);
+			}
+			
+			function inicia(){			
+				document.getElementById("btnDestaque").addEventListener("click",mudaCor);
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<input type="text" id="fnum"><button id="btnDestaque">Destacar</button><br><br>
+		
+		<p>Javascript muito louco</p>
+		<p>Javascript 1</p>
+		<p>Javascript 2</p>
+		<p>Javascript 3</p>
+		<p>Javascript 4</p>
+		
+		<!--
+			createAttribute cria atributo
+			removeAttribute remove atributo
+			setAttributeNode define o valor do atributo
+		-->
+		
+	</body>
+
+</html>

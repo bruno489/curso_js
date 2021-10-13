@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			
+			var mochila=[], mochila1=[], mochila2=[], pos;
+			var num=[3,2,5,1,7,6,8,9];
+			/*
+			num.sort();
+			num.reverse();
+			
+			numeros=num.join();
+			document.write(numeros);
+			
+			document.write(num[0]+"<br>");
+			document.write(num[1]+"<br>");
+			document.write(num[2]+"<br>");
+			document.write(num[3]+"<br>");
+			document.write(num[4]+"<br>");
+			document.write(num[5]+"<br>");
+			document.write(num[6]+"<br>"); 
+			
+			*/
+			
+			
+			mochila1.push("Faca");
+			mochila1.push("Corda");
+			mochila1.push("Perdeneira");
+			mochila1.push("Chave");
+			mochila1.unshift("Lanterna");
+			
+			mochila2.push("gola");
+			mochila2.push("manga");
+			mochila2.push("punho");
+			mochila2.push("abertura");
+			mochila2.unshift("botao");
+			
+			mochila=mochila1.concat(mochila2);
+			mochila.sort();
+			document.write("Tamanha da mochila: " + mochila.length + "<br>");
+			
+			document.write(mochila[0] + "<br>");
+			document.write(mochila[1] + "<br>");
+			document.write(mochila[2] + "<br>");
+			document.write(mochila[3] + "<br>");
+			document.write(mochila[4] + "<br>");
+			document.write(mochila[5] + "<br>");
+			document.write(mochila[6] + "<br>");
+			document.write(mochila[7] + "<br>");
+			document.write(mochila[8] + "<br>");
+			document.write(mochila[9] + "<br>");
+			
+			/*
+			pos=mochila.indexOf("Lanterna");
+			
+			if(pos<0){ document.write("Item não está na mochila");}else{document.write("Item está na mochila.<br>Posição:" + pos + "<br>");}
+			
+			document.write(mochila[0]+"<br>");
+			document.write(mochila[1]+"<br>");
+			document.write(mochila[2]+"<br>");
+			document.write(mochila[3]+"<br>");
+			document.write(mochila[4]+"<br>");
+			
+			*/
+			
+		</script>
+		
+		<style>
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+	
+		
+		
+		<!-- indexOf - pesquisa se tem algum elemento no array
+				metodo sort=ordenação do array
+				reverse-inverte a ordem dos elementos no array
+				join= imprime os elementos do array
+				concat= juntar os dois arrays
+				length=diz o tamanho do array
+				-->
+		
+	</body>
+
+</html>

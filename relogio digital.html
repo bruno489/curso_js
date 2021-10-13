@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			function relogio(){
+				var data=new Date();
+					
+				var hor=data.getHours();
+				var min=data.getMinutes();
+				var seg=data.getSeconds();
+				
+				if(hor<10){
+					hor="0"+hor;
+				}
+				
+				if(min<10){
+					min="0"+min;
+				}
+				
+				if(seg<10){
+					seg="0"+seg;
+				}
+				
+				var horas=hor+":"+min+":"+seg;
+				document.getElementById("rel").value=horas;
+			}
+			
+			var tempo=setInterval(relogio,1000); //chamar a função relogio de 1 em 1 segundo
+			
+		</script>
+		
+		<style>
+			
+			#rel{
+				text-align:center;
+				color:#0f0;
+				font-weight:bold;
+				font-size:30px;
+				width:130px;
+				background-color:#000;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+	
+		<input type="text" id="rel"/>
+		
+		<script>
+				
+		</script>
+		
+		<!-- getDay()=dia da semana, segunda, domingo...
+			getDate() dia do mes
+			getMonth() retorna o mes, janeiro, fevereiro...
+			getFullYear() retorna o ano
+			getDateString() retorna a data no padão 30/01/2020
+				-->
+		
+	</body>
+
+</html>

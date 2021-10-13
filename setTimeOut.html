@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			var px=0;
+			var py=0;
+			
+			function mudacor(){
+				var obj=document.getElementById("div1");
+				var r=Math.floor(Math.random()*255);
+				var g=Math.floor(Math.random()*255);
+				var b=Math.floor(Math.random()*255);
+				obj.style.backgroundColor="rgb("+r+","+g+","+b+")";
+			}
+			
+			//var tmp=setTimeout(mudacor,3000);
+			//trabalha com milisegundos são 3 segundos chama a função uma vez
+			
+			var tmp;
+			
+			function iniciar(){
+			
+				tmp=setInterval(mudacor,1000);
+			//chama de tres em tres segundos || setInterval(função a ser chamada,tempo em milisegundos);
+			}
+			
+			function parar(){
+			
+				clearInterval(tmp);
+				//parar o intervalo
+			}
+			//window.addEventListener("load",mudacor);
+			
+			
+			
+			
+		</script>
+		
+		<style>
+			
+			#div1{ width:100px;
+					height:100px;
+					border:1px solid #000;
+					background-color:#fff;
+					left:0px;
+					top:0px;}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<div id="div1"> </div>
+		
+		<button id="bt1" onclick="iniciar()"> Iniciar </button>
+		<button id="bt1" onclick="parar()"> Parar </button>		
+		
+		
+		<!---->
+		<script>
+			
+		</script>
+		
+		<!--	37=seta para a esquerda
+				38=seta para cima
+				39=seta para a direita
+				40=seta para baixo
+				13= Tecla enter
+				-->
+		
+	</body>
+
+</html>

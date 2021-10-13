@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+		
+			function hB(){
+				window.history.back();
+			}
+			
+			function hF(){
+				window.history.forward();
+			}
+			
+			function hg(){
+				window.history.go(-2);
+			}
+			
+			var painel,btnB,btnF,;
+			function inicia(){
+				btnB=document.getElementById("btnBack");
+				BtnF=document.getElementById("btnAvançar");
+				BtnG=document.getElementById("btnBack2");
+				
+				btnB.addEventListener("click",hB);
+				btnF.addEventListener("click",hf);
+				btnG.addEventListener("click",hg);
+				
+				painel=document.getElementById("info");
+				painel.innerHTML=history.length;
+			}
+			
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			#painel{
+				width:400px;
+				height:500px;
+				border:1px solid #000;
+				border-radius:10px;
+				padding:10px;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<h1>Home - aula 67</h1>
+		<p id="info"></p>
+		
+		<a href="slider.html">home</a>
+		<a href="write.html">Pag 1</a>
+		<a href="jogo da forca.html">Pag 2</a><hr>
+		<button id="btnBack">Voltar</button>
+		<button id="btnAvançar">Avançar</button>
+		<button id="btnBack2">Voltar 2</button>
+		<script>
+			
+		</script>
+		
+		<!--
+			permite manipular o historico permitindo avançar ou recuar no historico
+			
+			forward avança no historico
+			back volta no historico
+			go retorna ou avança x paginas
+			
+		-->
+		
+	</body>
+
+</html>

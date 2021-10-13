@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	
+	<script>
+		
+		let produtos=new Map();
+		
+		produtos.set("01","Mouse");
+		produtos.set("02","Teclado");
+		produtos.set("03","Monitor");
+		produtos.set("04","Gabinete");
+		
+		function info(chave,valor){
+			console.log("Chave: " + chave + " - Valor: "+valor);
+		}
+		
+		var has=produtos.has("03");
+		console.log(has);
+		//observa se existe determinada chave no map
+		
+	</script>
+</head>
+
+<body>
+</body>
+	<!--
+
+	produtos.clear();
+	limpa todo o map
+
+	produtos.delete("03");
+	deleta um elemento especifico
+
+	console.log(produtos.size);
+		//produtos.clear();
+		
+	produtos.delete("03");
+
+	for(p of produtos){
+			console.log(p);
+		}
+
+	let ikeys=produtos.keys();
+	//captura a chave
+
+	let ivalues=produtos.values();
+	//captura o valor da chave
+		console.log(ikeys.next().value)
+		
+		console.log(ivalues.next().value)
+
+
+-->
+</html>

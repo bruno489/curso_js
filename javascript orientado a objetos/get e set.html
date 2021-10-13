@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	
+	<script>
+		
+		class Carro{
+			constructor(marca,modelo,core){
+				this.marca=marca;
+				this.modelo=modelo;
+				this.cor=core;
+				this.partida="Desligado";
+			}
+			
+			info(){
+			document.write("Modelo: "+this.modelo + "<br>");
+				document.write("Marca: "+this.marca + "<br>");
+				document.write("Cor: "+this.cor + "<br>");
+				document.write("Partida: "+this.partida + "<hr>");
+			}
+			
+			set ligado(v){
+				this.partida=v;
+			}
+		}
+		
+		let ford=new Carro("Ford","ecosport","Azul");
+		let bmw=new Carro("BMW","320I","Roxo");
+		
+		bmw.ligado="Ligado";
+		
+		ford.info();
+		bmw.info();
+		
+	</script>
+</head>
+
+<body>
+	
+	<!--
+	set ligado(v){
+				this.partida=v;
+			}
+	//Serve para acrescentar um valor diferente do original
+
+	bmw.ligado="Ligado";
+	forma de acrescentar
+-->
+	
+</body>
+</html>

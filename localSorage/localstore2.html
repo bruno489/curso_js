@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			var vcorf,vcort,vnome;
+			
+			function gravar(){
+				vnome=document.getElementById("fnome").value;
+				localStorage.corf=vcorf;
+				localStorage.cort=vcort;
+				localStorage.nome=vnome;
+				document.getElementById("fconf").style.display="none";
+			}
+			function inicia(){
+			
+				if(localStorage.nome){ 
+				
+					vcorf=localStorage.corf;
+					vcort=localStorage.cort;
+					vnome=localStorage.nome;
+					defineCor(1,vcorf);
+					defineCor(2,vcort);
+					document.getElementById("painel").innerHTML="Bem-vindo "+vnome+"<hr>";
+				}
+			}
+			
+			function defineCor(op,cor){
+				if(op==1){
+					document.body.style.backgroundColor=cor;
+					vcorf=cor;
+				}else{
+					document.body.style.color=cor;
+					vcort=cor;
+				}
+			}
+			
+			function mostraConf(){
+				var form=document.getElementById("fconf");
+				form.style.display="block";
+			}
+			
+			window.addEventListener("load",inicia);
+		</script>
+		
+		<style>
+			
+			#fconf{
+				position:absolute;
+				top:0px;
+				left:0px;
+				border:1px solid #000;
+				background-color:#fff;
+				padding:20px;
+				border-radius:5px;
+				display:none;
+			}
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+	
+		<p id="painel"></p>
+		
+		<button onclick="mostraConf()">Configurações</button>
+		
+		<form id="fconf">
+			<label>Nome: </label><br>
+			<input type="text" name="fnome" id="fnome" size="20"><br><br>
+			<label>Cor de Fundo: </label><br>
+			<input type="radio" name="fcorF" onclick="defineCor(1,'#000')">Preto<br>
+			<input type="radio" name="fcorF" onclick="defineCor(1,'#fff')">Branco<br>
+			<input type="radio" name="fcorF" onclick="defineCor(1,'#f00')">Vermelho<br>
+			<input type="radio" name="fcorF" onclick="defineCor(1,'#0f0')">Verde<br>
+			<input type="radio" name="fcorF" onclick="defineCor(1,'#00f')">Azul<br><br>
+			<label>Cor texto: </label><br>
+			<input type="radio" name="fcorT" onclick="defineCor(2,'#000')">Preto<br>
+			<input type="radio" name="fcorT" onclick="defineCor(2,'#fff')">Branco<br>
+			<input type="button" value="Gravar" onclick="gravar()"><br><br>
+		</form>
+
+		
+		<!--
+			crio uma area no computador e armazeno e pode fechar o browser ou até desligar a maquina
+			até que remova
+			
+			localStorage.setItem("canal",cfbcursos); define uma chave setItem("nome da chave","valor")
+			localStorage.removeItem("canal","cfbcursos"); remove a chave
+			localStorage.getItem("canal"); obtem o valor da chave
+		-->
+		
+	</body>
+
+</html>

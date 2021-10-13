@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+		
+			function inicia(){
+				document.getElementById("painel").innerHTML=sessionStorage.nome;
+			}
+	
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			body{
+				background-color:#f00;
+				color:#fff;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<h2>Página 3</h2>
+		<div id="painel"></div>
+		
+		
+		<!--
+			tem o mesmo funcionamento do localStorage mas é temporarion
+		-->
+		
+	</body>
+
+</html>

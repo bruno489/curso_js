@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			/*
+			function ativo(){
+				
+				var elemento=document.activeElement.tagName;
+				console.log(elemento);
+			
+			}*/ 
+			/*
+			function loop(){
+				document.getElementById("cx").innerHTML=document.activeElement.tagName;
+				var frames=requestAnimationFrame(loop);
+			}
+			
+			function inicia(){
+				
+				loop();
+			}
+			*/
+			
+			function ativo(){
+				var cx=document.getElementById("texto_selecionado");
+				var elemento=document.activeElement;
+				var selecao=elemento.value.substring(elemento.selectionStart,elemento.selectionEnd);
+				cx.innerHTML=selecao;
+			}
+			
+			function inicia(){
+				document.getElementById("txt_original").addEventListener("mouseup",ativo);
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			.estilo1{color:#88f;}
+			.estilo2{color:#f88;}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		<!--<div id="cx"></div>
+		<input type="text" name="text">
+		<button>teste</button>-->
+		
+		<textarea rows="5" cols="20" id="txt_original">CFB Cursos - Cursos de Javascript</textarea><br>
+
+		Texto selecionado:<span id="texto_selecionado"></span>
+		
+		<!--
+			activeElement captura o elemento ativo
+		-->
+		
+	</body>
+
+</html>

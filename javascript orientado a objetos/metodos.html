@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	
+	<script>
+		
+		class Carro{
+			constructor(marca,modelo,core){
+				this.marca=marca;
+				this.modelo=modelo;
+				this.cor=core;
+			}
+			info(){
+			document.write("Modelo: "+this.modelo + "<br>");
+				document.write("Marca: "+this.marca + "<br>");
+				document.write("Cor: "+this.cor + "<hr>");
+			}
+		}
+		
+		let ford=new Carro("Ford","ecosport","Azul");
+		let bmw=new Carro("BMW","320I","Roxo");
+		
+		ford.info();
+		bmw.info();
+		
+	</script>
+</head>
+
+<body>
+	
+	<!--
+	info(){
+		document.write(this.cor + "<br>");
+			}
+	//metodo info serve para imprimir as informações
+
+	bmw.info();
+	//assim se chama o metodo info
+
+	ford.cor="Cinza"; define um novo valor para a cor
+-->
+	
+</body>
+</html>

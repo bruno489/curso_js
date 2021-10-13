@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			var gola=1;
+			var punho=1;
+			var camisa=1;
+			
+			var res;
+			
+			
+			
+			if(gola==1 && punho==1 && camisa==1){ res="Branca";} 
+			else if(gola==1 && punho==2 && camisa==1){res="Preta";}
+			else if(gola==1 && punho==2 && camisa==2){res="Vermelha";}
+			
+			document.write(res + "<br>");
+						
+			function preta(){ 	punho=2;
+								camisa=2;
+								if(gola==1 && punho==1 && camisa==1){ res="Branca"; document.write(res)} 
+								else if(gola==1 && punho==2 && camisa==1){res="Preta"; document.write(res)}
+								else if(gola==1 && punho==2 && camisa==2){res="Vermelha";}document.write(res)}
+			function vermelha(){ camisa=2; 
+								if(gola==1 && punho==1 && camisa==1){ res+="Branca"; document.write(res)} 
+								else if(gola==1 && punho==2 && camisa==1){res+="Preta"; document.write(res)}
+								else if(gola==1 && punho==1 && camisa==2){res+="Vermelha"; document.write(res)}}
+			
+			
+			
+		</script>
+		
+		<style>
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+	
+		<button type="button" onclick="preta()">Preta</button>
+		<button type="button" onclick="vermelha()">Vermelha</button>
+		
+		<!-- if dentro de if	
+				-->
+		
+	</body>
+
+</html>

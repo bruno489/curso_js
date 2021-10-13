@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			function inicia(){
+			
+				var elemento=document.getElementById("cbfcursos").childNodes;
+				document.getElementById("cbfcursos").removeChild(elemento[1]);
+				
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		<div id="cbfcursos">
+			<p id="p1">Javascript muito louco</p>
+			<p id="p2">Javascript 1</p>
+			<p id="p3">Javascript 2</p>
+			<p id="p4">Javascript 3</p>
+			<p id="p5">Javascript 4</p>
+			<p id="p6">Javascript 5</p>
+			<p id="p7">Javascript 6</p>
+		</div>
+		<!--
+			parentNode retorna quem é o elemeto pai
+			childNodes captura os filhos
+			document.getElementById("p5").parentNode retorna o pai do elemento, nesse caso, a div
+			document.getElementById("p5").parentNode.nodeName só o nome do elemento
+			document.getElementById("p5").remove(); exclui o elemento
+			
+			var elemento=document.getElementById("cbfcursos").childNodes;
+			document.getElementById("cbfcursos").removeChild(elemento[1]);
+			remove os filhos do elemento atraves do indice
+			
+		-->
+		
+	</body>
+
+</html>

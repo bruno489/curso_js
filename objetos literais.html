@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	
+	<script>
+		
+		let carro={
+			marca: "VW",
+			modelo: "Golf",
+			cor:'cinza',
+			cambio:'automatico',
+			info:function(){
+				console.log("marca: " + this.marca);
+				console.log("Modelo: " + this.modelo);
+			}
+		}
+		
+		let {marca,modelo}=carro;
+		//marca e modelo agora são variaveis, se der console.log(marca), essa será escrita
+		
+		console.log(carro);
+		//Carro.info();
+		
+	</script>
+</head>
+
+<body>
+</body>
+	<!--
+
+	let nome do objeto literal={
+			nome da propriedade: "propriedade",
+			nome da propriedade: "propriedade"
+		}
+	//lembrar de separa por virgula
+
+	console.log(nome do objeto.propriedade que quer obter);
+
+		let carro={
+			marca: "VW",
+			modelo: "Golf",
+			info:function(){
+				console.log("marca: " + this.marca);
+				console.log("Modelo: " + this.modelo);
+			}
+		}
+
+		//console.log(carro.marca);
+		
+		let c2=Object.create(carro);
+		//c2 sera um novo objeto com as mesmas caractecisticas de carro
+		//assim se cria um novo objeto
+		
+		//carro.marca="Honda";
+		//carro.modelo="HR-V";
+		//redefini a propriedade do carro
+		
+		c2['marca']="BMW";
+		c2['modelo']="320I";
+		//conotação de array tambem redefine a propriedade
+		
+		carro.info();
+		c2.info();
+		//chamei a função dentro do objeto literal
+		
+		//console.log(carro['marca']);
+		//voce tambem pode imprimir em conotação de array
+
+		delete caracteristicas.cor;
+		//deletou a propriedade cor
+
+		const Carro=Object.assign(veiculo,caracteristicas);
+		//junta os objetos veiculo e caracteristicas
+-->
+</html>

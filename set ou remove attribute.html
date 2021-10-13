@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		
+		<style>
+			
+			#carro{
+				width:1000px;
+				height:1000px;
+			}
+			
+			.c1{
+				background-image:url("img/s1.jpg");
+			}
+			
+			.c2{
+				background-image:url("img/s2.jpg");
+			}
+			
+			.c3{
+				background-image:url("img/s3.jpg");
+			}
+			
+		</style>
+		
+		<script>
+			function trocaCarro(c){
+			obj=document.getElementById("carro");
+				if(c==1){
+					obj.setAttribute("class","c1");
+				}else if(c==2){
+					obj.setAttribute("class","c2");
+				}else if(c==3){
+					obj.setAttribute("class","c3");
+				}
+			}
+			
+			function removerCarro(){
+				var obj=document.getElementById("carro");
+				obj.removeAttribute("class");
+			}
+			
+			function verifica(){
+				var obj=document.getElementById("carro");
+				if(obj.hasAttribute("class")){
+					alert("Atributo Class esta na tag");
+				}else{
+					alert("Sem Atributo Class");
+				}
+			}
+		</script>
+
+	</head>
+
+		
+	<body>
+		
+		<button onclick="trocaCarro(1)">Carro 1</button>
+		<button onclick="trocaCarro(2)">Carro 2</button>
+		<button onclick="trocaCarro(3)">Carro 3</button>
+		<button onclick="removerCarro()">Remover Carro</button>
+		<button onclick="verifica()">verifica</button>
+		
+		<div id="carro"></div>
+		
+		<!--
+			setAttribute=adiciona um atributo setAttribute("atributo que quero adicionar", valor desse atributo)
+			removeAttribute=Remove o atributo
+			hasAttribute=verifica se tá com o atributo
+		-->
+		
+	</body>
+
+</html>

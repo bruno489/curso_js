@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			/*
+			if(typeof(Storage)!="undefine"){
+			
+			localStorage.setItem("canal","cfbcursos");
+			//localStorage.removeItem("canal","cfbcursos");
+			var vcanal=localStorage.getItem("canal");
+			
+			document.write(vcanal);}else{document.write("Sem suporte a Web Storage!")}
+			*/
+			
+			
+			if(localStorage.visitas){
+				localStorage.visitas=Number(localStorage.visitas)+1;
+			}else{
+				localStorage.setItem("visitas",1);
+			}
+			
+			document.write("Visitas: " + localStorage.visitas);
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		
+
+		
+		<!--
+			crio uma area no computador e armazeno e pode fechar o browser ou até desligar a maquina
+			até que remova
+			
+			localStorage.setItem("canal",cfbcursos); define uma chave setItem("nome da chave","valor")
+			localStorage.removeItem("canal","cfbcursos"); remove a chave
+			localStorage.getItem("canal"); obtem o valor da chave
+		-->
+		
+	</body>
+
+</html>

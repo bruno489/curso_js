@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			var painel;
+			function inicia(){
+				painel=document.getElementById("painel");
+				painel.innerHTML+="L: " + screen.width +"px X A: " + screen.height + "px<hr>";
+				painel.innerHTML+="Largura disponivel: " + screen.availWidth + " px X Altura disponivel: " + screen.availHeight + " px<hr>";
+				painel.innerHTML+="L: " + screen.width +"px X A: " + screen.height + "px<hr>";
+			}
+			
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			#painel{
+				width:400px;
+				height:500px;
+				border:1px solid #000;
+				border-radius:10px;
+				padding:10px;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		
+		<div id="painel"></div>
+		<script>
+			
+		</script>
+		
+		<!--
+			screen expressa a tela
+			
+			screen.height pega a altura da tela
+			
+		-->
+		
+	</body>
+
+</html>

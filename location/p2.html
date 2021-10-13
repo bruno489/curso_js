@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			var aux=location.hash;
+			var dados=aux.split("#"); //divisão
+			//document.write(dados);
+			
+			
+			
+			//var h=location.href="http://www.google.com/"; //abra a pagina assima que que carregado
+			var h=location.href
+			document.write(h);
+			
+			
+			aux=location.search;
+			dados=aux.split("?"); //divisão feita com interrogação
+			v1=dados[1].split("=");
+			document.write(v1);
+			
+			document.write("<hr>");
+			
+		</script>
+		
+		<style>
+			
+			body{
+				background-color:#f00;
+				color:#fff;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		<h2>Pagina 2</h2>
+		
+		<a href="aula 69.html" id="txt">Aula 68</a>
+		
+		<!--
+			location.hash pega todos os parementos que foram passados na outra pagina
+			em forma de array
+			
+			location.hostname aparece o endereço do site
+		-->
+		
+	</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			function msg(){
+				alert("CBF Cursos");
+			}
+			
+			function cor1(){
+				var obj=document.getElementById("div1");
+				
+				obj.style.backgroundColor="#fff";
+			}
+			
+			function cor2(){
+				var obj=document.getElementById("div1");
+				
+				obj.style.backgroundColor="#f00";
+			}
+			
+			function addEventos(){
+				
+				var obj=document.getElementById("div1");
+				obj.addEventListener("click",msg);
+				obj.addEventListener("mouseover",cor1);
+				obj.addEventListener("mouseout",cor2);
+			}
+			
+			window.addEventListener("load",addEventos);
+			
+		</script>
+		
+		<style>
+			
+			#div1{ width:200px;
+					height:200px;
+					border:1px solid #000;
+					background-color:#f00;
+					position:absolute;
+					left:0px;
+					top:0px;}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<div id="div1"> </div>
+		
+
+		
+		
+		
+		<!---->
+		<script>
+			
+		</script>
+		
+		<!--	não se usa o on para chamar o evento, nem os parenteses para a função
+				
+				-->
+		
+	</body>
+
+</html>

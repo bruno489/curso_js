@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<p id="txt">CBF Cursos - Curso de Javascript - aula 46 do Curso de javascript</p>
+		
+		<script>
+		
+			var texto=document.getElementById("txt").innerHTML;
+		
+			var res=texto.match(/[a|o|e]/ig);
+			
+			document.write(res + ":" + res.length + "<br>");
+			
+			document.write(res[0]);
+			
+		</script>
+		
+		
+		<!--
+			match serve para pesquisar dentro da variavel
+			se não encontrar a palavra retorrna null 
+			res.length retorna a quantidade de palavras encontradas
+			
+			modificadores
+			i=busca sem case sensitive
+			g=busca todas as ocorrencias daquela palavra
+			m=pesquisa normal sem armazenar em array
+			/de/g encontra a palavra "de" em todas as ocorrencias
+			/Javascript/ig palavra javascript em todas as ocorrencias sem case sensitive
+			
+			tambem pode pesquisar letras
+			/o/ig letra o
+			
+			pesquisar mais de uma letra
+			/[o|a]/ig
+			
+			todos exceto "o" e "a"
+			/[^o|a]/ig  ^ diz que é exceto estes
+			
+			todos entre a e g
+			/[a-g]/ig
+		-->
+		
+	</body>
+
+</html>

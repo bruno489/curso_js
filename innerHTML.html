@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			var num;//maximo é 10
+			
+			//document.getElementById("id").propriedade que se deseja alterar.especificação;
+			document.getElementById("texto").style.color="#f00;";
+			
+			var txt=document.getElementById("texto");
+			
+			txt.style.color="#00f";
+			txt.style.fontSize="30px";
+			
+			
+		</script>
+		
+		<style>
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<p id="texto">Vamos correr</p>
+		
+		<input type="text" id="cxt" value="CFB cursos">
+		
+		<div id="dv"> Texto da div </div>
+		
+		<script>
+				document.getElementById("texto").innerHTML="To com fome";
+				document.getElementById("texto").style.fontSize="20px";
+				document.getElementById("dv").innerHTML="Novo texto";
+				
+				//document.getElementById("dv").innerHTML quando eu uso só isso, estou capturando o conteudo do id, como se fosse uma variavel
+				
+				/*var cx=document.getElementById("cxt");
+				var curso=cx.value="Vamos estudar";
+				
+				alert(curso);*/
+				
+				
+		</script>
+		
+		<!-- altera conteudo de uma tag, como um paragrafo por exemplo
+
+			-->
+		
+	</body>
+
+</html>

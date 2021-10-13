@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			var num;//maximo é 10
+			
+			try{
+				num=prompt("Digite um numero");
+				if(num>10){ throw new Error("Valor invalido");}
+				document.write(num+"</br>");
+				
+				}catch(e){
+				console.log("Mensagem de erro: " + e.message);
+				num=10
+				
+				}finally{document.write(num+"<br>"+"Fim do tratamento");}
+			
+			
+			
+		</script>
+		
+		<style>
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		
+		
+		<!-- try= a rotina que quero roda
+			catch= onde é corrigido o erro
+			finally= será executado caso ocorra um erro. (não é obrigatorio)
+			throw new Error=Gera um erro -->
+		
+	</body>
+
+</html>

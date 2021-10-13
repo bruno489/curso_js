@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			var l,a,px,py;
+			
+			var painel;
+			
+			
+			
+			window.addEventListener("load",inicia);
+			
+			function inicia(){
+				a=window.innerWidth;
+				l=window.innerHeight;
+				px=window.screenX;
+				py=window.screenY;
+				painel=document.getElementById("painel");
+				
+			}
+			
+			function info(){
+				painel.innerHTML="A:" + a + " - L:" + l + "<br>X:" + px + "<br>Y:" + py ;
+			}
+			
+		</script>
+		
+		<style>
+			
+			#painel{
+				border:1px solid #000;
+				border-radius:10px;
+				padding:15px;
+				width:150px;
+				height:100px;
+			}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<button onclick="info()"> Tamanho </button>
+		<div id="painel">  </div>
+		
+		<!--
+			window.innerWidth largura interna da janela
+			window.outerWidth largura externa da janela
+			
+			window.screenX e Y posição da janela no eixo x e y
+		-->
+		
+	</body>
+
+</html>

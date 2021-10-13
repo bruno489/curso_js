@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			function inicia(){
+			
+				var att=document.getElementById("p2").getAttribute("class");
+				console.log(att);
+				
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			.estilo1{color:#88f;}
+			.estilo2{color:#f88;}
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		<div id="cbfcursos">
+			<p id="p1" class="estilo1">Javascript muito louco</p>
+			<p id="p2" class="estilo2">Javascript 1</p>
+			<p id="p3" class="estilo1">Javascript 2</p>
+			<p id="p4" class="estilo2">Javascript 3</p>
+			<p id="p5" class="estilo1">Javascript 4</p>
+			<p id="p6" class="estilo2">Javascript 5</p>
+			<p id="p7" class="estilo1">Javascript 6</p>
+		</div>
+		<!--
+			document.getElementById("p2").getAttribute("class") captura o elemento class
+			console.log(att); escreve no console do f12
+		-->
+		
+	</body>
+
+</html>

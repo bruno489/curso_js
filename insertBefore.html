@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+	
+			function inicia(){
+				document.getElementById("btnContar").addEventListener("click",function(){
+					var lista=document.getElementById("listaElementos");
+					var num=lista.childNodes.length;
+					alert(num);
+				});
+				
+				document.getElementById("btnAdd").addEventListener("click",function(){
+					var lista=document.getElementById("listaElementos");
+					var texto=document.getElementById("fnovo");
+					var li=document.createElement("li");
+					li.textContent=texto.value;
+					lista.insertBefore(li,lista.childNodes[0]);
+					texto.value="";
+					texto.focus();
+				});
+			}
+			
+			window.addEventListener("load",inicia);
+			
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<input type="text" id="fnovo"><button id="btnAdd">Adicionar</button>
+		<button id="btnContar">Contar</button><br><br>
+		
+		<ul id="listaElementos">
+		</ul>
+		
+		<!--
+			insertBefore insere o elemento antes/em cima
+			insertBefore(insira o novo elemento,anter do elemento tal)
+		-->
+		
+	</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			
+			var minhaJanela;
+			
+			function abreJ(){
+				minhaJanela=window.open("tmp.html","_blank","width=300,height=300,top=300,left=300");
+			}
+			
+			function fechaJ(){
+				minhaJanela.close();
+			}
+		</script>
+		
+		<style>
+			
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+		
+		<p id="txt">Javascript muito louco</p>
+		
+		<button onclick="abreJ()"> Abrir nova janela </button>
+		<button onclick="fechaJ()"> Fechar janela </button>
+		
+		<!--
+			permite abrir uma nova pagina sem sair da atual
+			
+			window.open("tmp.html");
+			abre a janela atraves da url;
+			
+			abre na mesma janela
+			window.open("tmp.html","_self");
+			
+			abre janela com tamanho especifico
+			window.open("tmp.html","_blank","width=300,height=300");
+			
+			abre uma janela com posição especifica
+			window.open("tmp.html","_blank","width=300,height=300,top=300,left=300");
+		-->
+		
+	</body>
+
+</html>

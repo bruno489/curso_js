@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<title>HTML5</title>
+
+		<script language="javascript">
+			var msg,pos;
+			var pos=1;
+			
+			/* 		posição do podio
+			*/
+			
+			switch(pos){
+			
+				case 1:
+					msg="Primeiro lugar";
+					break;
+				case 2:
+					msg="Segundo lugar";
+					break;
+				case 3:
+					msg="Terceiro lugar";
+					break;
+				default:
+					msg="Fora do podio";
+					break;
+			}
+			
+			switch(pos){
+			
+				case 1:
+				case 2:
+				case 3:
+					msg+="<br>Subiu ao podio"; /* nesse caso, a mensagem vale para 1,2 ou 3 */
+					break;
+				default:
+					msg+="Fora do podio";
+					break;
+			}
+			
+			document.write(msg);
+			
+		</script>
+		
+		<style>
+			
+			
+		</style>
+
+	</head>
+
+		
+	<body>
+	
+		
+		
+		<!-- ao final de cada caso deve-se usar o break para sair do swith
+				-->
+		
+	</body>
+
+</html>

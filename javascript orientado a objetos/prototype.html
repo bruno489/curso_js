@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	
+	<script>
+		
+		
+		class Carro{
+			constructor(tpComb){
+				this.qtdeComb=100;
+				this.partida=false;
+				this.tipoComb=tpComb;
+			}
+			
+			info(){
+			document.write("Qtde combustibel: "+this.qtdeComb + "<br>");
+				document.write("Partida: "+this.partida + "<br>");
+				document.write("Tipo Combs: "+this.tipoComb + "<hr>");
+			}
+			
+			set ligado(v){
+				this.partida=v;
+			}
+			
+			set setComb(v){
+				if(v<0 || v<100){
+				   Alert("Valor inválido");
+				   }else{
+					   this.qtdeComb=v;
+				   }
+			}
+		}
+		
+		class carroCombate extends Carro{
+			constructor(porTiro){
+				super("Diesel");
+				this.tiros=1000;
+				this.potTiro=porTiro;
+				this.blindagem=100;
+			}
+			
+			info(){
+				
+				document.write("Tiros: "+this.tiros + "<br>");
+				
+				document.write("Potencia do tiro: "+this.potTiro + "<br>");
+				
+				document.write("Blindagem: "+this.blindagem + "<br>");
+				super.info();
+				
+			}
+		}
+		
+		let ford=new Carro(1);
+		let Tanque=new carroCombate("Calibre 50");
+		
+		
+		ford.ligado="Ligado";
+		
+		
+		Carro.prototype.potencia=500;
+		Carro.prototype.velocidade=0;
+		Carro.prototype.velMax=0;
+		Carro.prototype.info2=function(){
+			document.write("velMax: "+this.velMax + "<br>");
+				
+				document.write("Potencia: "+this.potencia + "<br>");
+				
+				document.write("Velocidade: "+this.velocidade + "<br>");
+				
+			this.info();
+		}
+		//aqui foi criada uma nova função
+		
+		ford.info2();
+		Tanque.info2();
+		
+		
+	</script>
+</head>
+
+<body>
+	
+	<!--
+	objeto.prototype.propriedade=valor da propriedade criada;
+
+	prototype serve para sobreescrever ou criar novos metodos para uma classe
+-->
+	
+</body>
+</html>
